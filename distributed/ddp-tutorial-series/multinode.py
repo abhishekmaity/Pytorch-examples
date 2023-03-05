@@ -37,7 +37,7 @@ class Trainer:
         self.model = DDP(self.model, device_ids=[self.local_rank])
 
     def _load_snapshot(self, snapshot_path):
-        loc = f"cuda:{self.gpu_id}"
+        loc = f"cuda:{self.local_rank}"
         snapshot = torch.load(snapshot_path, map_location=loc)
         self.model.load_state_dict(snapshot["MODEL_STATE"])
         self.epochs_run = snapshot["EPOCHS_RUN"]
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='simple distributed training job')
     parser.add_argument('total_epochs', type=int, help='Total epochs to train the model')
     parser.add_argument('save_every', type=int, help='How often to save a snapshot')
-    parser.add_argument('--batch_size', default=32, help='Input batch size on each device (default: 32)')
+    parser.add_argument('--batch_size', default=32, type=int, help='Input batch size on each device (default: 32)')
     args = parser.parse_args()
     
     main(args.save_every, args.total_epochs, args.batch_size)
