@@ -6,6 +6,16 @@ experiment with PyTorch.
 
 .. panels::
 
+    Image Classification using Vision Transformer
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    This example shows how to train a `Vision Transformer <https://en.wikipedia.org/wiki/Vision_transformer>`__ 
+    from scratch on the `CIFAR10 <https://en.wikipedia.org/wiki/CIFAR-10>`__ database.
+
+    `GO TO EXAMPLE <https://github.com/pytorch/examples/blob/main/vision_transformer>`__ :opticon:`link-external` 
+
+    ---
+
     Image Classification Using ConvNets
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
@@ -159,3 +169,11 @@ experiment with PyTorch.
 
     `GO TO EXAMPLE <https://github.com/pytorch/examples/tree/main/mnist_forward_forward>`__ :opticon:`link-external` 
 
+    ---
+
+    Graph Convolutional Network
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    This example implements the `Semi-Supervised Classification with Graph Convolutional Networks <https://arxiv.org/pdf/1609.02907.pdf>`__ paper on the CORA database.
+
+    `GO TO EXAMPLE <https://github.com/pytorch/examples/blob/main/gcn>`__ :opticon:`link-external` 
